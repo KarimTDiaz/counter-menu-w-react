@@ -9,16 +9,13 @@ import {
 } from './styles';
 
 const Menu = () => {
-	const [display, setDisplay] = useState('none');
+	const [open, setOpen] = useState(false);
 	return (
 		<>
 			<StyledMenu>
-				<MenuIcon
-					src='/public/bars-solid.svg'
-					onClick={() => displayChange(display, setDisplay)}
-				/>
+				<MenuIcon src='/public/bars-solid.svg' onClick={() => setOpen(!open)} />
 				<Nav>
-					<MenuList display={display}>
+					<MenuList open={open}>
 						<MenuItem>
 							<MenuLink>HOME</MenuLink>
 						</MenuItem>
@@ -36,10 +33,6 @@ const Menu = () => {
 			</StyledMenu>
 		</>
 	);
-};
-
-const displayChange = (display, setDisplay) => {
-	display === 'none' ? setDisplay('block') : setDisplay('none');
 };
 
 export default Menu;
