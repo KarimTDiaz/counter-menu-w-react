@@ -1,6 +1,7 @@
 import ColorsContainer from '../colors-container/ColorsContainer';
 import CounterContainer from '../counter-container/CounterContainer';
 import Menu from '../menu/Menu';
+import Toggle from '../toggle/Toggle';
 
 import { StyledMainContainer } from './styles';
 
@@ -10,6 +11,7 @@ const MainContainer = () => {
 			<Menu></Menu>
 			<ColorsContainer></ColorsContainer>
 			<CounterContainer></CounterContainer>
+			<Toggle />
 		</StyledMainContainer>
 	);
 };
